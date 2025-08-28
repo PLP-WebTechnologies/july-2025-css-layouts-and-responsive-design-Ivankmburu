@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Layout Assignment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Responsive Webpage</h1>
+  </header>
+
+  <nav>
+    <ul class="nav-list">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-layout">
+    <section class="content">
+      <h2>Main Content</h2>
+      <p>This is the main content area with some text.</p>
+      
+      <div class="card-container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <h3>Sidebar</h3>
+      <p>Additional information here.</p>
+    </aside>
+  </main>
+
+  <footer>
+[8/28/2025 10:25 PM] ChatGPT: <p>© 2025 Responsive Design. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+---
+
+style.css
+css
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+header, footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav {
+  background: #444;
+  margin: 1rem 0;
+}
+
+/* Flexbox for navigation */
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-list li {
+  margin: 0 1rem;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Grid for main layout */
+.main-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+
+/* Content and sidebar */
+.content {
+  background: #f0f0f0;
+  padding: 1rem;
+}
+
+.sidebar {
+  background: #ddd;
+  padding: 1rem;
+}
+
+/* Flexbox for cards */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  flex: 1;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+}
+
+/* Media Queries */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr; /* stack columns */
+  }
+
+  .card-container {
+[8/28/2025 10:25 PM] ChatGPT: flex-direction: column;
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .nav-list li {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  header, footer {
+    font-size: 0.9rem;
+  }
+
+  .nav-list a {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+}
+```
+
